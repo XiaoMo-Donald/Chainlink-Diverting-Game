@@ -1,4 +1,4 @@
-## CCIP Tic-Tac-Toe (Chainlink-TicTacToe)
+## CCIP Tic-Tac-Toe (Chainlink-TicTacToe-Game)
 
 > **Note**
 >

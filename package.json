@@ -1,5 +1,5 @@
 {
-  "name": "chainlink-tic-tac-toe",
+  "name": "chainlink-tic-tac-toe-game",
   "scripts": {
     "generateTypes": "typechain --target ethers-v5 --out-dir typechain-types './abi/*.json'"
   },
