@@ -1,11 +1,11 @@
 /**
  * NewGame React Component
- * This component allows a user to start or join a game of tic-tac-toe, by selecting 
+ * This component allows a user to start or join a game of tic-tac-toe, by selecting
  * the destination chain for the game, and the game session to join.
- * 
+ *
  * It makes use of the `useContext` hook to access the global app context,
  * and custom hooks `useAccount`, `useSigner`, and `useNetwork` for blockchain interaction.
- * 
+ *
  * State variables:
  * txHash - keeps track of the transaction hash
  * sessionIds - keeps track of the session ids
@@ -19,8 +19,8 @@
  * start - starts a new game
  * setPlayerDetails - sets the details for the player
  * join - allows a player to join a game
- * 
- * This component renders a section for chain and session selection, 
+ *
+ * This component renders a section for chain and session selection,
  * two buttons for starting and joining a game, and a section for displaying messages.
  */
 
@@ -34,10 +34,10 @@ import { Contract } from "alchemy-sdk";
 import {List} from './List'
 
 function NewGame() {
-    const { 
+    const {
         setDisabledCell, playerChar, setPlayerChar, setPlayerNumber, setSessionId,
-        destinationChain, setDestinationChain, text, setText, refreshBoard, 
-        sessionId, intervalId, setIntervalId, resetBoard, disabledButton, setDisabledButton 
+        destinationChain, setDestinationChain, text, setText, refreshBoard,
+        sessionId, intervalId, setIntervalId, resetBoard, disabledButton, setDisabledButton
     } = useContext(AppContext);
 
     const { address, isDisconnected } = useAccount();
@@ -66,7 +66,7 @@ function NewGame() {
                 const TicTacToeContract = new Contract(contractAddress[chainidMap[chain.id]], abi, signer)
                 const boardStatus = await TicTacToeContract.getBoardStatus(sessionId);
                 refreshBoard(boardStatus)
-                return boardStatus      
+                return boardStatus
             } else {
                 return
             }
@@ -74,7 +74,7 @@ function NewGame() {
           console.error(`Error: ${error}`);
         }
       }
-            
+
 
     const updateAvailableGameSessions = async() => {
         try{
@@ -86,10 +86,10 @@ function NewGame() {
                     options.push({
                         'label': sessionIds[i].slice(0,8),
                         'value': sessionIds[i]
-                    })	
+                    })
             }
             setSessionIds(options)
-            setDisabledButton(false)    
+            setDisabledButton(false)
         } catch (e) {
             console.log(e)
             return;
@@ -116,7 +116,7 @@ function NewGame() {
             await startGame.wait();
             setText("Game Started, Waiting for the other player on " + destinationChain.label + " to join.")
             setSessionId("")
-            setTxHash(null);      
+            setTxHash(null);
             setDisabledButton(false)
             setPlayerChar('O')
             setPlayerNumber(1)
@@ -143,7 +143,7 @@ function NewGame() {
         else if(address == gameSession['player_2'] || gameSession['player_2']  == zero_address) {
             setPlayerNumber(2)
             setPlayerChar('X')
-        } 
+        }
     }
 
     const join = async()=> {
@@ -154,12 +154,12 @@ function NewGame() {
     }
 
     return (
-        <div className="card" style={{marginBottom:"10px",paddingBottom:"0px"}}>
-            
-            {chain? <List text="Select Destination chain to play with" options={getDestinationChainList(chain.id)} childToParent={childToParent}/>:  
+        <div className="card" style={{marginBottom:"10px",paddingBottom:"0px",width:"500px",backgroundColor:"rgba(26,26,26,1);" }}>
+
+            {chain? <List text="Select Destination chain to play with" options={getDestinationChainList(chain.id)} childToParent={childToParent}/>:
                     <List options={getDestinationChainList(0)} childToParent={childToParent} />}
             {destinationChain? <List text="Select a session" options={sessionIds} childToParent={setSession}/>:""}
-        <section style={{marginTop:"10px"}}>
+        <section style={{marginTop:"10px",display:'flex',alignItems:'center',justifyContent:'center'}}>
             <button  className={button.primary} onClick={() =>  start()} disabled={disabledButton}>
                 Start a New Game
             </button>
