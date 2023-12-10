@@ -27,9 +27,6 @@ npm install
 
 npm run dev
 
-5. Sample Screenshot
-<img width="1728" alt="Screenshot 2023-07-12 at 1 47 30 PM" src="https://github.com/QingyangKong/ccip-tic-tac-toe/assets/66191235/25d78723-84d5-409f-b2c5-ae8df066be34">
-
 You can now access the application from `http://localhost:3000` in your browser.
 
 ## Components
