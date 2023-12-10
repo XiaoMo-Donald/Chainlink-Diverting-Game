@@ -160,10 +160,10 @@ function NewGame() {
                     <List options={getDestinationChainList(0)} childToParent={childToParent} />}
             {destinationChain? <List text="Select a session" options={sessionIds} childToParent={setSession}/>:""}
         <section style={{marginTop:"10px",display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <button  className={button.primary} onClick={() =>  start()} disabled={disabledButton}>
+            <button  className={button.primary} onClick={() =>  start()} disabled={disabledButton} style={{flex:'1'}}>
                 Start a New Game
             </button>
-            <button  className={button.primary} onClick={() =>  join()} style={{marginLeft:"20px"}} disabled={disabledButton}>
+            <button  className={button.primary} onClick={() =>  join()} style={{marginLeft:"20px",flex:'1'}} disabled={disabledButton} >
                 Join a Game
             </button>
         </section>

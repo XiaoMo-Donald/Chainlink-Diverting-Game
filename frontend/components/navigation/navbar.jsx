@@ -12,7 +12,7 @@ export default function Navbar() {
             link: "/",
         },
         {
-            name: "About",
+            name: "About Game",
             link: "/about",
         }
     ];

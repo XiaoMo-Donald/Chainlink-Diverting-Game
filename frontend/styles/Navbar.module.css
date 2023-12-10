@@ -48,7 +48,7 @@
 
 .menusItem.active,
 .menusItem:hover {
-    background-color: rgba(14,118,253, 1);
+    background-image: repeating-linear-gradient(45deg, #0E76FD, #3d7eff);
     color: #ffffff;
     box-shadow: 0px 2px 12px rgba(255, 255, 255, 0.35);
 }

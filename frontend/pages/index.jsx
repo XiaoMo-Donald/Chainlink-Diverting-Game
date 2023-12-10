@@ -273,8 +273,8 @@ export default function Home() {
                       <div className={styles.left}>
                           <Header/>
                           <NewGame/>
-                          <button className={button.secondary} onClick={() => resetBoard()} style={{width: "500px"}}>
-                              Reset
+                          <button className={styles.restBtn} onClick={() => resetBoard()} >
+                              Reset Game
                           </button>
                       </div>
                       <div className={styles.right}>

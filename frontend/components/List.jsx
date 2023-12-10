@@ -132,7 +132,7 @@ export class List extends React.Component {
   render() {
     return (
         <div>
-          <div style={{ maxWidth: "350px", margin: "0 auto" }}>
+          <div style={{ width: "100%", margin: "0 auto 12px auto" }}>
             <StyledSelect
               placeholder={this.props.text}
               addPlaceholder={this.state.addPlaceholder}

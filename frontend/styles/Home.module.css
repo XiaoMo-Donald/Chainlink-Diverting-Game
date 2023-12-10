@@ -19,7 +19,7 @@
 .left {
     display: flex;
     flex-direction: column;
-    border-radius: 6px;
+    border-radius: 12px;
     border: 1px solid #2C3748;
     background-color: #1E293B;
     padding: 24px;
@@ -29,7 +29,23 @@
 
 }
 
-.foot{
+.restBtn {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #ffffff;
+    background-image: repeating-linear-gradient(45deg, #0E76FD, #3d7eff);
+    border-radius: 3px;
+    transition: all 0.1s ease-in-out;
+}
+.restBtn:hover{
+    transform: scale(1.02);
+}
+.foot {
     width: 100%;
     font-size: 22px;
     color: white;
