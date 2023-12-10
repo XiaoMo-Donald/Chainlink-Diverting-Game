@@ -1,0 +1,38 @@
+.container {
+    width: 1200px;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 24px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.content {
+    min-width: 1200px;
+    text-align: center;
+    line-height: 2em;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.rules {
+    width: 100%;
+    padding: 36px;
+    border-radius: 6px;
+    margin-left: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid #2C3748;
+    background-color: #1E293B;
+}
+
+.mb54 {
+    margin-bottom: 54px;
+}

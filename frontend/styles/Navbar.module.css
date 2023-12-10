@@ -1,17 +1,64 @@
 
-
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	padding: 2rem 4rem 0.8rem 4rem;
-	gap: 2rem;
-	margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 4rem 0.8rem 4rem;
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
 
 
-.alchemy_logo{
-	width: 10rem;
-	cursor: pointer;
+.alchemyLogo {
+    flex-shrink: 0;
+    width: 30rem;
+    cursor: pointer;
+    color: white;
+    font-size: 28px;
+    /*font-family: "AlphabetSoup Tilt BT";*/
+    font-family: "AdLib WGL4 BT";
+    background: linear-gradient(to right, rgba(14,118,253, 1), #ffff00); /*设置渐变的方向从左到右 颜色从ff0000到ffff00*/
+    -webkit-background-clip: text;/*将设置的背景颜色限制在文字中*/
+    -webkit-text-fill-color: transparent;/*给文字设置成透明*/
+}
+
+.menus {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 1.5rem;
+    list-style: none;
+}
+
+.menusItem {
+    /*background-color: #3E4046;*/
+    /*color: #ffffff; */
+    background-color: #ffffff;
+    color: #3E4046;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 8px 24px;
+    cursor: pointer;
+}
+
+.menusItem.active,
+.menusItem:hover {
+    background-color: rgba(14,118,253, 1);
+    color: #ffffff;
+    box-shadow: 0px 2px 12px rgba(255, 255, 255, 0.35);
+}
+
+.connectBtn {
+    flex-shrink: 0;
+    width: 30rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.connectBtn button[data-testid="rk-connect-button"]{
+    line-height: 40px!important;
 }

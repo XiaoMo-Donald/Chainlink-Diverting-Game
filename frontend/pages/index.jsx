@@ -269,15 +269,22 @@ export default function Home() {
                     disabledButton,
                     setDisabledButton
                 }}>
-                    <Header/>
-                    <NewGame/>
-                    <Board/>
+                  <div className={styles.game}>
+                      <div className={styles.left}>
+                          <Header/>
+                          <NewGame/>
+                          <button className={button.secondary} onClick={() => resetBoard()} style={{width: "500px"}}>
+                              Reset
+                          </button>
+                      </div>
+                      <div className={styles.right}>
+                          <Board/>
+                      </div>
+                  </div>
                 </AppContext.Provider>
                 <br/>
 
-                <button className={button.secondary} onClick={() => resetBoard()} style={{width: "380px"}}>
-                    Reset
-                </button>
+                <div className={styles.foot}> Have fun playing this exciting game!</div>
             </main>
         </div>
     );

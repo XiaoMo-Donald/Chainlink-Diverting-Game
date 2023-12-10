@@ -154,7 +154,7 @@ function NewGame() {
     }
 
     return (
-        <div className="card" style={{marginBottom:"10px",paddingBottom:"0px",width:"500px",backgroundColor:"rgba(26,26,26,1);" }}>
+        <div className="card" style={{marginBottom:"10px",paddingBottom:"0px",width:"500px" }}>
 
             {chain? <List text="Select Destination chain to play with" options={getDestinationChainList(chain.id)} childToParent={childToParent}/>:
                     <List options={getDestinationChainList(0)} childToParent={childToParent} />}

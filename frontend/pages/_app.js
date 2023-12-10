@@ -58,6 +58,7 @@ function MyApp({ Component, pageProps }) {
 				modalSize="compact"
 				initialChain={process.env.NEXT_PUBLIC_DEFAULT_CHAIN}
 				chains={chains}
+				coolMode
 			>
 				<MainLayout style={{paddingTop:"-10px"}}>
 					<Component {...pageProps} />

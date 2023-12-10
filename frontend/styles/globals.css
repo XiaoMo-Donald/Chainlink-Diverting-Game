@@ -2,9 +2,11 @@
 
 html,
 body {
-    background-color: rgba(12,12,12, 1);
+    background-color: rgba(16,22,36, 1);
     font-family: 'Rubik';
     font-weight: normal;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 h1 {

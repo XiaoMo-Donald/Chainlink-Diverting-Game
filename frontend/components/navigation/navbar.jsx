@@ -1,8 +1,11 @@
 import {ConnectButton} from "@rainbow-me/rainbowkit";
 import styles from "../../styles/Navbar.module.css";
 import Link from "next/link";
+import {useRouter} from 'next/navigation'
+import {useState} from "react";
 
 export default function Navbar() {
+    const router = useRouter();
     const menus = [
         {
             name: "Home",
@@ -11,35 +14,35 @@ export default function Navbar() {
         {
             name: "About",
             link: "/about",
-        },
-        {
-            name: "Contract",
-            link: "/contract",
         }
     ];
-    const linkTo = (menu) => {
-        window.location.href = menu.link;
-    };
+    const [menuActive, setMenuActive] = useState('/');
+    const menuActiveChange = (menu) => {
+        setMenuActive(menu.link);
+        router.push(menu.link)
+        document.title = menu.name;
+    }
     return (
         <nav className={styles.navbar}>
-            <a href="/" target={"_self"} style={{color: "white"}}>
+            <Link href="/" target={"_self"} className={styles.alchemyLogo}>
                 {/*<img className={styles.alchemy_logo} src="/img.png" ></img>*/}
-                Game
-            </a>
-            <ul className={'menus'} style={{witdh: '600px', display: "flex", alignItems: "center", justifyContent: "space-around", gap: "0 20px"}}>
+                Tic-Tac-Toe Game
+            </Link>
+            <ul className={styles.menus}>
                 {
                     menus.map((menu, index) => {
                         return (
-                            <li key={index} className={'menus-item'}>
-                                <Link href={menu.link} target={"_self"} style={{color: "white"}}>
-                                    {menu.name}
-                                </Link>
+                            <li key={index} className={`${styles.menusItem} ${menuActive === menu.link ? styles.active : ''}`}
+                                onClick={() => menuActiveChange(menu)}>
+                                {menu.name}
                             </li>
                         );
                     })
                 }
             </ul>
-            <ConnectButton></ConnectButton>
+            <div className={styles.connectBtn}>
+                <ConnectButton></ConnectButton>
+            </div>
         </nav>
     );
 }
