@@ -1,10 +1,11 @@
-## CCIP Tic-Tac-Toe (Chainlink-TicTacToe-Game)
+## TicTacToe-Game
 
-> **Note**
->
-> _This repository represents an example of using a Chainlink product or service. It is provided to help you understand how to interact with Chainlink’s systems so that you can integrate them into your own. This template is provided "AS IS" without warranties of any kind, has not been audited, and may be missing key checks or error handling to make the usage of the product more clear. Take everything in this repository as an example and not something to be copy pasted into a production ready service._
 
 This project demonstrates how Chainlink CCIP can be used to create a cross-chain Tic-Tac-Toe game
+
+![image](https://github.com/XiaoMo-Donald/Chainlink-TicTacToe-Game/assets/49033970/506968c5-94f7-48dc-bcf3-c51e05c42ecd)
+
+![image](https://github.com/XiaoMo-Donald/Chainlink-TicTacToe-Game/assets/49033970/281829c7-45e1-41d8-9b06-bdcf9e417127)
 
 
 ## Prerequisites
