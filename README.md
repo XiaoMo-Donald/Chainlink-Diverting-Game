@@ -1,7 +1,22 @@
-## TicTacToe-Game
+# About Tic-Tac-Toe
 
+Tic-Tac-Toe is a simple and popular strategy board game that is typically played by two players. The game board consists of a 3x3 grid, and players take turns placing their respective markers on empty squares with the goal of forming a line horizontally, vertically, or diagonally.
 
-This project demonstrates how Chainlink CCIP can be used to create a cross-chain Tic-Tac-Toe game
+## Game Rules
+
+1. The Tic-Tac-Toe board is a 3x3 grid with a total of 9 positions for players to place their markers.
+2. Player 1 uses "X" as their marker, and Player 2 uses "O".
+3. The game starts with an empty board, and Player 1 goes first.
+4. Each player takes turns selecting an empty square and placing their marker on that position.
+5. Players try to form a line horizontally, vertically, or diagonally to win the game.
+6. If the board becomes full and no player has formed a line, the game ends in a draw.
+7. If any player successfully forms a line, they win the game.
+8. The game can be restarted once it is finished.
+ 
+
+That concludes the introduction to Tic-Tac-Toe. Have fun playing this exciting game!
+
+![image](https://github.com/XiaoMo-Donald/Chainlink-TicTacToe-Game/assets/49033970/22991bf3-534d-4268-9116-f29f0501bd4a)
 
 ![image](https://github.com/XiaoMo-Donald/Chainlink-TicTacToe-Game/assets/49033970/506968c5-94f7-48dc-bcf3-c51e05c42ecd)
 
@@ -46,19 +61,13 @@ Comment out `import './tasks'` line in the file `hardhat.config` if you have iss
 TS_TRANSPILE_NODE=1 npx hardhat test
 ```
 
-## What is Chainlink CCIP?
-
-**Chainlink Cross-Chain Interoperability Protocol (CCIP)** provides a single, simple, and elegant interface through which dApps and web3 entrepreneurs can securely meet all their cross-chain needs, including token transfers and arbitrary messaging.
-
-![basic-architecture](./img/basic-architecture.png)
-
-With Chainlink CCIP, one can:
+With Chainlink TicTacToe, one can:
 
 - Transfer supported tokens
 - Send messages (any data)
 - Send messages and tokens
 
-CCIP receiver can be:
+ receiver can be:
 
 - Smart contract that implements `CCIPReceiver.sol`
 - EOA
