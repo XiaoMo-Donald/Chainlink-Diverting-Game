@@ -18,9 +18,9 @@
     font-size: 28px;
     /*font-family: "AlphabetSoup Tilt BT";*/
     font-family: "AdLib WGL4 BT";
-    background: linear-gradient(to right, rgba(14,118,253, 1), #ffff00); /*设置渐变的方向从左到右 颜色从ff0000到ffff00*/
-    -webkit-background-clip: text;/*将设置的背景颜色限制在文字中*/
-    -webkit-text-fill-color: transparent;/*给文字设置成透明*/
+    background: linear-gradient(to right, rgba(14, 118, 253, 1), #ffff00); /*设置渐变的方向从左到右 颜色从ff0000到ffff00*/
+    -webkit-background-clip: text; /*将设置的背景颜色限制在文字中*/
+    -webkit-text-fill-color: transparent; /*给文字设置成透明*/
 }
 
 .menus {
@@ -58,8 +58,22 @@
     flex-shrink: 0;
     width: 30rem;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
+    gap: 0 24px;
 }
-.connectBtn button[data-testid="rk-connect-button"]{
-    line-height: 40px!important;
+
+.connectBtn button[data-testid="rk-connect-button"] {
+    line-height: 40px !important;
 }
+
+.toggleTheme {
+    font-size: 30px;
+    color: #1e293b;
+    cursor: pointer;
+}
+
+.toggleTheme:hover {
+    color: #1676FC;
+}
+

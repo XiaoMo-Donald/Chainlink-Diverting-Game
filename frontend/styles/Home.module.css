@@ -17,11 +17,10 @@
 }
 
 .left {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
-    /*border: 1px solid #2C3748;*/
-    /*background-color: #1E293B;*/
     padding: 24px;
     background-color: #ffffffab;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.025);
@@ -42,7 +41,7 @@
     font-size: 18px;
     color: #ffffff;
     background-image: repeating-linear-gradient(45deg, #0E76FD, #3d7eff);
-    border-radius: 3px;
+    border-radius: 12px;
     transition: all 0.12s ease-in-out;
 }
 
@@ -56,4 +55,10 @@
     /*color: white;*/
     color: #1e293b;
     text-align: center;
+}
+
+.scoreText {
+    color: rgba(30, 41, 59, 0.9);
+    font-family: fantasy;
+    font-size: inherit;
 }

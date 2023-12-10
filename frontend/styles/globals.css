@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;1,400&display=swap');
+@import url('./iconfont.css');
 
 html,
 body {
@@ -12,6 +13,7 @@ body {
 body {
     position: relative;
 }
+
 body:before {
     content: "";
     position: absolute;
@@ -22,6 +24,7 @@ body:before {
     background-image: url('/images/grid.svg');
     z-index: 1;
 }
+
 body:after {
     content: "";
     position: absolute;
@@ -66,7 +69,57 @@ input:focus-visible {
     box-shadow: none;
 }
 
+.react-dropdown-select,
+.react-dropdown-select-dropdown {
+    border-radius: 6px !important;
+}
+
 @media (prefers-color-scheme: dark) {
     html {
     }
+}
+
+
+html.dark .toggleTheme {
+    color: white !important;
+}
+
+html.dark body:before,
+html.dark body:after {
+    display: none !important;
+}
+
+html.dark .about-content,
+html.dark .about-title {
+    color: #ffffff;
+}
+
+html.dark .about-rules {
+    border: 1px solid #2C3748;
+    background-color: #1E293B;
+    box-shadow: none;
+    color: #ffffff;
+    padding: 39px;
+}
+
+html.dark .about-container {
+    color: #ffffff;
+}
+
+html.dark .home-left {
+    border: 1px solid #2C3748;
+    background-color: #1E293B;
+    padding:27px;
+}
+
+html.dark .home-right {
+
+}
+
+html.dark .home-foot {
+    color: #ffffff;
+}
+
+html.dark .home-score-text {
+    color: #ffffff;
 }

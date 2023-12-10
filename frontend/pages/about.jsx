@@ -4,17 +4,17 @@ export default function About() {
     return (
         <>
             <div className={styles.container}>
-                <h1 className={styles.title}>About  Tic-Tac-Toe</h1>
+                <h1 className={`${styles.title} about-title`}>About  Tic-Tac-Toe</h1>
 
-                <p className={`${styles.mb54} ${styles.content}`}>Tic-Tac-Toe is a simple and popular strategy board game that is typically played by two players. The game board consists of a 3x3
+                <p className={`${styles.mb54} ${styles.content} about-content`}>Tic-Tac-Toe is a simple and popular strategy board game that is typically played by two players. The game board consists of a 3x3
                     grid,
                     and players take turns placing their respective markers on empty squares with the goal of forming a line horizontally, vertically,
                     or
                     diagonally.</p>
 
-                <h2 className={styles.title}>Game Rules</h2>
+                <h2 className={`${styles.title} about-title`}>Game Rules</h2>
 
-                <ol className={`${styles.rules} ${styles.mb54}`}>
+                <ol className={`${styles.rules} ${styles.mb54} about-rules`}>
                     <li>The Tic-Tac-Toe board is a 3x3 grid with a total of 9 positions for players to place their markers.</li>
                     <li>Player 1 uses "X" as their marker, and Player 2 uses "O".</li>
                     <li>The game starts with an empty board, and Player 1 goes first.</li>
@@ -25,7 +25,7 @@ export default function About() {
                     <li>The game can be restarted once it is finished.</li>
                 </ol>
 
-                <p className={styles.content}>That concludes the introduction to Tic-Tac-Toe. Have fun playing this exciting game!</p>
+                <p className={`${styles.content} about-content`}>That concludes the introduction to Tic-Tac-Toe. Have fun playing this exciting game!</p>
             </div>
         </>
     )

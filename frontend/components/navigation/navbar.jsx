@@ -17,10 +17,15 @@ export default function Navbar() {
         }
     ];
     const [menuActive, setMenuActive] = useState('/');
+    const [darkTheme, setDarkTheme] = useState(false);
     const menuActiveChange = (menu) => {
         setMenuActive(menu.link);
         router.push(menu.link)
-        document.title = menu.name;
+        document.title = menu.name + '丨Tic-Tac-Toe Game';
+    }
+    const toggleTheme = () => {
+        setDarkTheme(!darkTheme);
+        document.documentElement.className = darkTheme ? 'dark' : '';
     }
     return (
         <nav className={styles.navbar}>
@@ -41,6 +46,7 @@ export default function Navbar() {
                 }
             </ul>
             <div className={styles.connectBtn}>
+                <div className={`${styles.toggleTheme} toggleTheme iiconfont iicon-taiyang`} onClick={() => toggleTheme()}></div>
                 <ConnectButton></ConnectButton>
             </div>
         </nav>

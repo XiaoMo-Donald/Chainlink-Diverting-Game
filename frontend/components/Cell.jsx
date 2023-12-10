@@ -16,7 +16,7 @@ const Boop = ({ row = 0, column = 0, cellClick = ()=>{}, timing = 150, disabledC
     justifyContent: "center",
     alignItems:"center",
     cursor: "pointer",
-    backgroundImage: "linear-gradient(45deg, #0E76FD, #00C2FA)",
+    background: "linear-gradient(45deg, #0E76FD, #00C2FA)",
   };
   React.useEffect(() => {
     if (!isBooped) {
