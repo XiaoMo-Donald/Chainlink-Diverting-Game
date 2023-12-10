@@ -44,13 +44,14 @@
     border-radius: 12px;
     padding: 8px 24px;
     cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .menusItem.active,
 .menusItem:hover {
     background-image: repeating-linear-gradient(45deg, #0E76FD, #3d7eff);
     color: #ffffff;
-    box-shadow: 0px 2px 12px rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 2px 12px #2196F3;
 }
 
 .connectBtn {

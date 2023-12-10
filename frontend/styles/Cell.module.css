@@ -1,0 +1,7 @@
+.cellBox {
+    transition: all 0.2s ease-in-out;;
+}
+
+.cellBox:hover {
+    background: #ff80ab !important;
+}

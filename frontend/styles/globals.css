@@ -2,11 +2,35 @@
 
 html,
 body {
-    background-color: rgba(16,22,36, 1);
+    background-color: rgba(16, 22, 36, 1);
     font-family: 'Rubik';
     font-weight: normal;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+body {
+    position: relative;
+}
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/grid.svg');
+    z-index: 1;
+}
+body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/beams.jpg');
+    z-index: 0;
 }
 
 h1 {
@@ -34,6 +58,12 @@ a {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+input:focus-visible {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
 }
 
 @media (prefers-color-scheme: dark) {

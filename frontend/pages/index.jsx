@@ -85,7 +85,6 @@ export default function Home() {
                 setText("Move Communicated, waiting for other player to make a move")
             } catch (e) {
                 console.log(e);
-                return;
             }
         }
     }
@@ -128,32 +127,35 @@ export default function Home() {
 
 
     // cellClick function
-    function cellClick(row, column) {
-        // Handles cell click event in the tic-tac-toe game
-        if (playerChar && currentChar == playerChar) {
-            if (gameOver || winner) { // do nothing if the game is over or there's a winner
-                return;
+    async function cellClick(row, column) {
+        try {
+
+            // Handles cell click event in the tic-tac-toe game
+            if (playerChar && currentChar === playerChar) {
+                if (gameOver || winner) { // do nothing if the game is over or there's a winner
+                    return;
+                }
+
+                if (cells[row][column] !== "") { // cell isn't empty? Do nothing!
+                    return;
+                }
+
+                await move(row, column)
+                // if it reaches here means that the click is valid
+                const newBoard = {...cells} // javascript way to copy an array
+                newBoard[row][column] = currentChar // Do you remember the 0-1, 1-1 structure?
+                setCells(newBoard) // set the cells with the new value
+
+                // Change the current player
+
+                if (currentChar === X) {
+                    setCurrentChar(O)
+                } else {
+                    setCurrentChar(X)
+                }
             }
-
-            if (cells[row][column] != "") { // cell isn't empty? Do nothing!
-                return;
-            }
-
-
-            move(row, column)
-            // if it reaches here means that the click is valid
-            const newBoard = {...cells} // javascript way to copy an array
-            newBoard[row][column] = currentChar // Do you remember the 0-1, 1-1 structure?
-            setCells(newBoard) // set the cells with the new value
-
-
-            // Change the current player
-
-            if (currentChar == X) {
-                setCurrentChar(O)
-            } else {
-                setCurrentChar(X)
-            }
+        } catch (e) {
+            console.log('error:', e)
         }
     }
 
@@ -165,7 +167,7 @@ export default function Home() {
 
         let win = checkWin(boardStatus)
         if (win) {
-            if (playerChar == win) {
+            if (playerChar === win) {
                 setText("You Win")
             } else {
                 setText("You Lose. Better luck next time!!")
@@ -175,7 +177,7 @@ export default function Home() {
             let row = Math.floor(i / 3);
             let column = i % 3;
             let cellValue = boardStatus[i];
-            if (newBoard[row][column] == '') {
+            if (newBoard[row][column] === '') {
                 switch (cellValue) {
                     case 'X':
                         newBoard[row][column] = 'X'; // Player 1's move
@@ -269,20 +271,19 @@ export default function Home() {
                     disabledButton,
                     setDisabledButton
                 }}>
-                  <div className={styles.game}>
-                      <div className={styles.left}>
-                          <Header/>
-                          <NewGame/>
-                          <button className={styles.restBtn} onClick={() => resetBoard()} >
-                              Reset Game
-                          </button>
-                      </div>
-                      <div className={styles.right}>
-                          <Board/>
-                      </div>
-                  </div>
+                    <div className={styles.game}>
+                        <div className={styles.left}>
+                            <Header/>
+                            <NewGame/>
+                            <button className={styles.restBtn} onClick={() => resetBoard()}>
+                                Reset Game
+                            </button>
+                        </div>
+                        <div className={styles.right}>
+                            <Board/>
+                        </div>
+                    </div>
                 </AppContext.Provider>
-                <br/>
 
                 <div className={styles.foot}> Have fun playing this exciting game!</div>
             </main>
