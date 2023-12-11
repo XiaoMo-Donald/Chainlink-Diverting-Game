@@ -21,7 +21,7 @@ export default function Navbar() {
     const menuActiveChange = (menu) => {
         setMenuActive(menu.link);
         router.push(menu.link)
-        document.title = menu.name + '丨Tic-Tac-Toe Game';
+        document.title = menu.name + '丨Diverting Game';
     }
     const toggleTheme = () => {
         setDarkTheme(!darkTheme);
@@ -30,8 +30,7 @@ export default function Navbar() {
     return (
         <nav className={styles.navbar}>
             <Link href="/" target={"_self"} className={styles.alchemyLogo}>
-                {/*<img className={styles.alchemy_logo} src="/img.png" ></img>*/}
-                Tic-Tac-Toe Game
+                Diverting Game
             </Link>
             <ul className={styles.menus}>
                 {
